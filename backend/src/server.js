@@ -90,6 +90,6 @@ app.use((err, _req, res, _next) => {
   res.status(500).json({ success: false, message: "Internal server error." });
 });
 
-app.listen(PORT, () => {
-  console.log(`API running at http://localhost:${PORT}`);
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`API running on port ${PORT}`);
 });
